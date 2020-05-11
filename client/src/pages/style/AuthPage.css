@@ -1,0 +1,22 @@
+.login-button {
+  margin-right: 20px;
+}
+
+/* needs to overriding materialize.css default styles*/
+input.auth-input {
+  border-bottom: 1px solid #fff !important;
+  box-shadow: 0 1px 0 0 #fff !important;
+}
+
+input.auth-input + label {
+  color: #ffffff !important;
+}
+
+input.auth-input:focus + label {
+  color: #ffeb3b !important;
+}
+
+input.auth-input:focus {
+  border-bottom: 1px solid #ffeb3b !important;
+  box-shadow: 0 1px 0 0 #ffeb3b !important;
+}

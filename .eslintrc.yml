@@ -1,0 +1,21 @@
+env:
+  browser: true
+  es6: true
+  mocha: true
+  node: true
+parser: 'babel-eslint'
+extends:
+  - 'airbnb-base'
+  - 'plugin:react/recommended'
+parserOptions:
+  ecmaVersion: 6
+  sourceType: 'module'
+  ecmaFeatures:
+    classes: true
+rules:
+  brace-style:
+    - warn
+    - 1tbs
+settings:
+  react:
+    pragma: React

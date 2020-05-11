@@ -1,0 +1,50 @@
+{
+  "name": "buffeter",
+  "version": "0.1.0",
+  "private": true,
+  "author": "EvolaDev",
+  "description": "Service for investors for analyze of companies",
+  "main": "App.js",
+  "dependencies": {
+    "@testing-library/jest-dom": "^4.2.4",
+    "@testing-library/react": "^9.3.2",
+    "@testing-library/user-event": "^7.1.2",
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.1",
+    "eslint-config-airbnb-base": "14.1.0",
+    "eslint-plugin-import": "2.20.1",
+    "express": "^4.17.1",
+    "express-validator": "^6.4.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.9"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EvolaDev/Buffeter.git"
+  },
+  "scripts": {
+    "start": "node App.js",
+    "server": "nodemon App.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.3"
+  }
+}
