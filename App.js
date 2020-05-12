@@ -23,3 +23,4 @@ async function connect() {
     // process.exit() is not reachable because 'throw' already terminate process;
   }
 }
+connect();
