@@ -3,7 +3,7 @@ const { check, validationResult } = require('express-validator');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const config = require('config');
-const { User } = require('../models/User');
+const User = require('../models/User');
 
 const MINIMUM_PASSWORD_LENGTH = 6;
 const getAuthValidationMiddleware = () => [
@@ -33,7 +33,7 @@ router.post('/register', getAuthValidationMiddleware(), async (req, resp) => {
       return resp.status(500).json({ message: 'this email already exist' });
     }
     // TODO: make sold value dynamic
-    const hashedPassword = await bcrypt.hash(password, 'someStaticSold');
+    const hashedPassword = await bcrypt.hash(password, 10);
     const user = new User({ email, password: hashedPassword });
 
     await user.save();

@@ -11,11 +11,11 @@ const PORT = config.get('port') || 5000;
 
 async function connect() {
   try {
-    /*await mongoose.connect(config.get('mongoURI'), {
+    await mongoose.connect(config.get('mongoURI'), {
       useNewUrlParser: true,
       useUnifiedTopology: true,
       useCreateIndex: true,
-    });*/
+    });
     app.listen(PORT, () => {
       console.log(`application has been started at port ${PORT}...`);
     });
