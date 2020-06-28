@@ -56,18 +56,19 @@ router.post('/login', getLogInValidationMiddleware(), async (req, resp) => {
     }
 
     const { email, password } = req.body;
-    const user = User.findOne({ email });
+    const user = await User.findOne({ email });
     if (!user) {
       return resp.status(400).json({ message: 'invalid email or password' });
     }
 
-    const isMatchPassword = await bcrypt.compare(password, User.password);
+    const isMatchPassword = await bcrypt.compare(password, user.password);
     if (!isMatchPassword) {
       return resp.status(400).json({ message: 'invalid email or password' });
     }
 
     const token = jwt.sign({ userId: user.id }, config.get('jwtKey'), { expiresIn: '1h' });
     resp.json({ token, userId: user.id });
+
     return resp.status(200).json({ message: 'User is successful login' });
   } catch (error) {
     return resp.status(500).json({ message: 'internal server error, try again in several minutes' });
