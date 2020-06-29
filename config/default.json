@@ -1,5 +1,6 @@
 {
   "port": 5000,
   "jwtKey": "buffeterInYourMind",
-  "mongoURI": "mongodb+srv://denis:testMongo1234@cluster0-pweq4.azure.mongodb.net/disa?retryWrites=true&w=majority"
+  "mongoURI": "mongodb+srv://denis:testMongo1234@cluster0-pweq4.azure.mongodb.net/disa?retryWrites=true&w=majority",
+  "baseUrl": "http://localhost:5000"
 }
